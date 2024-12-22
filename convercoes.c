@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 
 // Função que converte grandezas elétricas
@@ -112,8 +111,6 @@ void grandezasEletricas() {
 }
 
 
-
-
 void unidades_armazenamento(){
     char unidades[][5] = {"B", "KB", "MB", "GB", "TB"};
     char continua;
@@ -121,9 +118,11 @@ void unidades_armazenamento(){
     double valor, resultado;
     const float M = 1024;
 
-    printf("\n----- Conversor de unidades de armazenamento -----\n\n");
+    
     do
     {
+        system("cls");
+        printf("\n----- Conversor de unidades de armazenamento -----\n\n");
         printf("Selecione a unidade de entrada:\n1 - Bytes(B)\n2 - Kilobytes(KB)\n3 - Megabytes(MB)\n4 - Gigabyte(GB)\n5 - Terabyte(TB)\nEscolha: ");
         scanf("%d", &opcao1);
         if (opcao1 < 1 || opcao1 > 5)

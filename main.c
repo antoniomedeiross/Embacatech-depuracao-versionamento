@@ -5,6 +5,7 @@
 int main(){
   printf("===== CONVERSOR DE UNIDADES =====");
   grandezasEletricas();
+  unidades_armazenamento();
 
   return 0;
 }
