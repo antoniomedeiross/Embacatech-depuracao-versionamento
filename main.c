@@ -4,7 +4,7 @@
 
 int main(){
   printf("===== CONVERSOR DE UNIDADES =====");
-  int a = grandezasEletricas();
+  grandezasEletricas();
 
-  return a;
+  return 0;
 }

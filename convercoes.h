@@ -1,2 +1,5 @@
 #include "convercoes.c"
-int grandezasEletricas();
+
+// Funções utilizadas no main
+void grandezasEletricas();
+void unidades_armazenamento();
