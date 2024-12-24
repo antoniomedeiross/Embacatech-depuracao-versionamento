@@ -11,7 +11,10 @@ void desenharMenuCategoria(void);
 int inteiro_validado(void);
 void unidades_armazenamento(void);
 
-int main() {
+int main(){
+    printf("===== CONVERSOR DE UNIDADES =====");
+    grandezasEletricas();
+    unidades_armazenamento();
     int sair = 1;
     int tipo_de_unidade = 0;
 
@@ -60,6 +63,7 @@ int main() {
                 break;
             case 6:
                 printf("Unidades de Potência.\n");
+                grandezasEletricas();
                 break;
             case 7:
                 printf("Unidades de Área.\n");
