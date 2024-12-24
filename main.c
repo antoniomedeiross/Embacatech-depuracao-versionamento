@@ -59,7 +59,8 @@ int main() {
                 printf("Unidades de Velocidade.\n");
                 break;
             case 6:
-                printf("Unidades de Potência.\n");
+               // printf("Unidades de Potência.\n");
+                grandezasEletricas();
                 break;
             case 7:
                 printf("Unidades de Área.\n");
