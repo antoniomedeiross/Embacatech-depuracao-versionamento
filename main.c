@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
+#include "conversoes.h"
 
 // Função para desenhar o menu inicial
 
@@ -46,7 +47,8 @@ int inteiro_validado(void) {
     buffer[strcspn(buffer, "\n")] = 0;
 
     // Chama a função que valida a string e retorna o valor ou -1 em caso de erro
-    for (int i = 0; i < strlen(buffer); i++) {
+    size_t buffer_length = strlen(buffer);
+    for (size_t i = 0; i < buffer_length; i++) {
         // Se encontrar um caractere não numérico, retorna -1
         if (buffer[i] < '0' || buffer[i] > '9') {
             return -1;
@@ -126,6 +128,7 @@ int main() {
             break;
         case 6:
             // Código para Unidades de Potência
+            void grandezasEletricas();
             break;
         case 7:
             // Código para Unidades de Área
@@ -135,6 +138,7 @@ int main() {
             break;
         case 9:
             // Código para Unidades de Dados
+            void unidades_armazenamento(){
             break;
         case 10:
             // Código para ajuda
