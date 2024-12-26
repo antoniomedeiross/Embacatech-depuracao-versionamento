@@ -8,7 +8,7 @@ Este é o **Primeiro Exercício - Grupo 5, Subgrupo 2** do programa EmbarcaTech.
 **Participantes Ativos**:  
 - Daniel Silva de Souza
 - Henrique da Silva Bispo  
-- *(Adicione seu nome aqui)*
+- Antonio Aparecido Medeiros
 
 ---
 
