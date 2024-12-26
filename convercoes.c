@@ -325,3 +325,38 @@ void unidades_comprimento(void) {
 
     } while (strcasecmp(resposta, "Y") == 0 || strcasecmp(resposta, "SIM") == 0);
 }
+
+
+
+void mostrarAjuda(void) {
+    system("cls"); // Limpa a tela no Windows
+    printf("|---------------- AJUDA ---------------------|\n");
+    printf("| Este programa é um conversor de unidades. |\n");
+    printf("| Siga as instruções abaixo para utilizá-lo:|\n");
+    printf("|-------------------------------------------|\n");
+    printf(" 1. Escolha uma opção de conversão no menu:\n");
+    printf("    - 1: Unidades de Comprimento\n");
+    printf("    - 2: Unidades de Massa\n");
+    printf("    - 3: Unidades de Volume\n");
+    printf("    - 4: Unidades de Temperatura\n");
+    printf("    - 5: Unidades de Velocidade\n");
+    printf("    - 6: Unidades de Potência\n");
+    printf("    - 7: Unidades de Área\n");
+    printf("    - 8: Unidades de Tempo\n");
+    printf("    - 9: Unidades de Dados\n");
+    printf("    - 10: Ajuda (exibe este menu de ajuda)\n");
+    printf("    - 0: Sair do programa\n");
+    printf("\n");
+    printf(" 2. Após escolher uma opção, você será redirecionado\n");
+    printf("    para a funcionalidade correspondente.\n");
+    printf("\n");
+    printf(" 3. Siga as instruções fornecidas em cada funcionalidade\n");
+    printf("    para realizar a conversão desejada.\n");
+    printf("\n");
+    printf(" DICA: Certifique-se de digitar apenas números válidos\n");
+    printf(" para evitar erros na entrada de dados.\n");
+    printf("|-------------------------------------------|\n");
+    printf("| Pressione qualquer tecla para voltar ao menu principal. |\n");
+    getchar(); // Aguarda o usuário pressionar uma tecla
+}
+

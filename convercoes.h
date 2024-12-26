@@ -4,4 +4,5 @@
 void grandezasEletricas();
 void unidades_armazenamento();
 void unidades_comprimento();
-void unidades_tempo(void);
+void unidades_tempo();
+void mostrarAjuda();

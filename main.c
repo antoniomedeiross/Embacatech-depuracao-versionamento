@@ -88,6 +88,7 @@ int main(){
                 break;
             case 10:
                 printf("Ajuda.\n");
+                mostrarAjuda();
                 break;
             default:
                 sair = 0;
