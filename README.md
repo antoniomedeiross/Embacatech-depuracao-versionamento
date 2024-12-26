@@ -6,7 +6,8 @@ Este é o **Primeiro Exercício - Grupo 5, Subgrupo 2** do programa EmbarcaTech.
 
 **Mentor**: Professor Giovanni Antherreli Lima da Silva  
 **Participantes Ativos**:  
-- Daniel Silva de Souza  
+- Daniel Silva de Souza
+- Henrique da Silva Bispo  
 - *(Adicione seu nome aqui)*
 
 ---
