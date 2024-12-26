@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 
+
 // Função que converte grandezas elétricas
 void grandezasEletricas() {
   int choice = 0;
@@ -176,10 +177,162 @@ void unidades_armazenamento(){
 
         printf("\n%.4lf %s = %.4lf %s", valor, unidades[opcao1 - 1], resultado, unidades[opcao2 - 1]);
         printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
-        fflush(stdin);1
-        1
+        fflush(stdin);
         scanf(" %c", &continua);
         printf("\n");
     } while (continua == 'Y' || continua == 'y');
   return;
+}
+//-----------------------------------------------------------------------------------------------
+//UNIDADES DE TEMPO
+
+// Protótipos
+double entrada_validada(void) {
+    char buffer[100];
+    double valor = 0;
+
+    while (1) { // Loop para validação da entrada
+        if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
+            printf("Entrada inválida. Tente novamente: ");
+            continue;
+        }
+
+        buffer[strcspn(buffer, "\n")] = 0; // Remove o caractere de nova linha
+
+        // Tenta converter para número
+        char *endptr;
+        valor = strtod(buffer, &endptr);
+
+        // Verifica se a conversão foi bem-sucedida e se o valor é positivo
+        if (endptr == buffer || *endptr != '\0' || valor < 0) {
+            printf("Entrada inválida. Digite um número positivo: ");
+            continue;
+        }
+
+        break; // Entrada válida
+    }
+
+    return valor;
+}
+
+
+// Função principal de conversão de unidades de tempo
+// Função principal de conversão de unidades de tempo
+void unidades_tempo(void) {
+    int opcao = 0;
+    double valor = 0;
+    char resposta[10]; // Para verificar a resposta do usuário
+
+    do {
+        system("cls");
+        fflush(stdin);
+        printf("|--------- Conversão de Unidades de Tempo --------|\n");
+        printf("| Escolha a unidade de entrada:                  |\n");
+        printf("| 1. Segundos                                    |\n");
+        printf("| 2. Minutos                                     |\n");
+        printf("| 3. Horas                                       |\n");
+        printf("--------------------------------------------------\n");
+        printf("Escolha uma opção (1 a 3): ");
+        opcao = (int)entrada_validada();
+
+        while (opcao < 1 || opcao > 3) {
+            printf("Opção inválida. Escolha uma opção entre 1 e 3: ");
+            opcao = (int)entrada_validada();
+        }
+
+        printf("\nDigite o valor para conversão (deve ser positivo): ");
+        valor = entrada_validada();
+
+        printf("\n|----------------- Resultados ------------------|\n");
+        if (opcao == 1) { // Conversão de segundos
+            printf("%.2f segundos = %.2f minutos\n", valor, valor / 60);
+            printf("%.2f segundos = %.2f horas\n", valor, valor / 3600);
+        } else if (opcao == 2) { // Conversão de minutos
+            printf("%.2f minutos = %.2f segundos\n", valor, valor * 60);
+            printf("%.2f minutos = %.2f horas\n", valor, valor / 60);
+        } else if (opcao == 3) { // Conversão de horas
+            printf("%.2f horas = %.2f minutos\n", valor, valor * 60);
+            printf("%.2f horas = %.2f segundos\n", valor, valor * 3600);
+        }
+        printf("|----------------------------------------------|\n");
+
+        // Perguntar ao usuário se ele deseja realizar outra conversão
+        printf("\nDeseja realizar outra conversão? (Y/N): ");
+        fgets(resposta, sizeof(resposta), stdin);
+        resposta[strcspn(resposta, "\n")] = 0; // Remove o '\n' da entrada
+
+    } while (strcasecmp(resposta, "Y") == 0 || strcasecmp(resposta, "SIM") == 0);
+}
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------
+
+// Função para conversão de unidades de comprimento
+void unidades_comprimento() {
+    int opcao;
+    float valor, resultado;
+
+    // Exibir menu de opções para o usuário
+    printf("|---------- UNIDADES DE COMPRIMENTO ----------|\n");
+    printf("| Escolha a conversão desejada:              |\n");
+    printf("| 1. Metros para Centímetros                 |\n");
+    printf("| 2. Metros para Milímetros                  |\n");
+    printf("| 3. Centímetros para Metros                 |\n");
+    printf("| 4. Centímetros para Milímetros             |\n");
+    printf("| 5. Milímetros para Metros                  |\n");
+    printf("| 6. Milímetros para Centímetros             |\n");
+    printf("| 0. Voltar ao menu principal                |\n");
+    printf("|--------------------------------------------|\n");
+    printf("Digite a opção desejada: ");
+    scanf("%d", &opcao);
+
+    // Processar a opção escolhida
+    switch (opcao) {
+        case 1: // Metros para Centímetros
+            printf("Digite o valor em metros: ");
+            scanf("%f", &valor);
+            resultado = valor * 100;
+            printf("%.2f metros equivalem a %.2f centímetros.\n", valor, resultado);
+            break;
+        case 2: // Metros para Milímetros
+            printf("Digite o valor em metros: ");
+            scanf("%f", &valor);
+            resultado = valor * 1000;
+            printf("%.2f metros equivalem a %.2f milímetros.\n", valor, resultado);
+            break;
+        case 3: // Centímetros para Metros
+            printf("Digite o valor em centímetros: ");
+            scanf("%f", &valor);
+            resultado = valor / 100;
+            printf("%.2f centímetros equivalem a %.2f metros.\n", valor, resultado);
+            break;
+        case 4: // Centímetros para Milímetros
+            printf("Digite o valor em centímetros: ");
+            scanf("%f", &valor);
+            resultado = valor * 10;
+            printf("%.2f centímetros equivalem a %.2f milímetros.\n", valor, resultado);
+            break;
+        case 5: // Milímetros para Metros
+            printf("Digite o valor em milímetros: ");
+            scanf("%f", &valor);
+            resultado = valor / 1000;
+            printf("%.2f milímetros equivalem a %.2f metros.\n", valor, resultado);
+            break;
+        case 6: // Milímetros para Centímetros
+            printf("Digite o valor em milímetros: ");
+            scanf("%f", &valor);
+            resultado = valor / 10;
+            printf("%.2f milímetros equivalem a %.2f centímetros.\n", valor, resultado);
+            break;
+        case 0: // Voltar ao menu principal
+            printf("Voltando ao menu principal...\n");
+            break;
+        default:
+            printf("Opção inválida! Por favor, tente novamente.\n");
+            break;
+    }
 }
