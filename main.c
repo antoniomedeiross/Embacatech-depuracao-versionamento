@@ -78,6 +78,7 @@ int main(){
             case 8:
                 system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Tempo.\n");
+                unidades_tempo();
                 break;
             case 9:
                 system("cls"); // Limpa a tela no Windows
@@ -106,7 +107,7 @@ void desenharMenuCategoria(void) {
     printf("| %-43s |\n", "3. Unidades de Volume");
     printf("| %-43s |\n", "4. Unidades de Temperatura");
     printf("| %-43s |\n", "5. Unidades de Velocidade");
-    printf("| %-43s |\n", "6. Unidades de Potência");
+    printf("| %-44s |\n", "6. Unidades de Potência");
     printf("| %-44s |\n", "7. Unidades de Área");
     printf("| %-43s |\n", "8. Unidades de Tempo");
     printf("| %-43s |\n", "9. Unidades de Dados");
