@@ -49,6 +49,7 @@ int main(){
             case 1:
                 system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Comprimento.\n");
+                unidades_comprimento();
                 break;
             case 2:
                 system("cls"); // Limpa a tela no Windows
@@ -68,7 +69,7 @@ int main(){
                 break;
             case 6:
                 system("cls"); // Limpa a tela no Windows
-                printf("Unidades de Tempo.\n");
+                printf("Unidades de Potencia.\n");
                 grandezasEletricas();
                 break;
             case 7:
