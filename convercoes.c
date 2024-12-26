@@ -30,7 +30,7 @@ void grandezasEletricas() {
       
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -42,7 +42,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -54,7 +54,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -66,7 +66,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -78,7 +78,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break; 
@@ -90,7 +90,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -102,7 +102,7 @@ void grandezasEletricas() {
       printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
       scanf(" %c", &cont);
       
-      if (cont == 'Y') {
+      if (cont == 'Y' || cont == 'y' ) {
         grandezasEletricas();
       }
       break;
@@ -119,16 +119,15 @@ void unidades_armazenamento(){
     const float M = 1024;
 
     
-    do
-    {
+    do{
         system("cls");
         printf("\n----- Conversor de unidades de armazenamento -----\n\n");
         printf("Selecione a unidade de entrada:\n1 - Bytes(B)\n2 - Kilobytes(KB)\n3 - Megabytes(MB)\n4 - Gigabyte(GB)\n5 - Terabyte(TB)\nEscolha: ");
         scanf("%d", &opcao1);
-        if (opcao1 < 1 || opcao1 > 5)
-        {
+        if (opcao1 < 1 || opcao1 > 5) {
             do
             {
+                fflush(stdin); 
                 printf("\nPor favor, escolha um numero no intervalo correto\n");
                 printf("Escolha: ");
                 scanf("%d", &opcao1);
@@ -136,10 +135,12 @@ void unidades_armazenamento(){
         }
 
         printf("\nDigite o valor a ser convertido: ");
+        fflush(stdin);
         scanf("%lf", &valor);
         resultado = valor;
 
         printf("\nUnidade de destino:\n1 - Bytes(B)\n2 - Kilobytes(KB)\n3 - Megabytes(MB)\n4 - Gigabyte(GB)\n5 - Terabyte(TB)\nEscolha: ");
+        fflush(stdin);
         scanf("%d", &opcao2);
         if (opcao2 < 1 || opcao2 > 5)
         {
@@ -147,6 +148,7 @@ void unidades_armazenamento(){
             {
                 printf("\nPor favor, escolha um numero no intervalo correto\n");
                 printf("Escolha: ");
+                fflush(stdin);
                 scanf("%d", &opcao2);
             } while (opcao2 < 1 || opcao2 > 5);
         }
@@ -174,6 +176,8 @@ void unidades_armazenamento(){
 
         printf("\n%.4lf %s = %.4lf %s", valor, unidades[opcao1 - 1], resultado, unidades[opcao2 - 1]);
         printf("\n\nDeseja fazer uma nova conversao?\n[Y/N]: ");
+        fflush(stdin);1
+        1
         scanf(" %c", &continua);
         printf("\n");
     } while (continua == 'Y' || continua == 'y');

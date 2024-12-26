@@ -29,6 +29,7 @@ int main(){
         // Solicita e valida a entrada do usuário
         printf("|---------------------------------------------|\n");
         printf("\nINFORME O TIPO DE UNIDADE (1 a 9) : ");
+        fflush(stdin); 
         tipo_de_unidade = inteiro_validado();
 
         // Verifica se a entrada é válida
@@ -38,37 +39,49 @@ int main(){
             printf("|---------------------------------------------|\n");
             printf("************* ENTRADA INVALIDA ***************|\n");
             printf("\nINFORME O TIPO DE UNIDADE (1 a 9) : ");
+            fflush(stdin); 
             tipo_de_unidade = inteiro_validado();
         }
-        SetConsoleOutputCP(CPAGE_DEFAULT); // Restaura a codificação padrão
+       // SetConsoleOutputCP(CPAGE_DEFAULT); // Restaura a codificação padrão
 
         // Switch para chamar funções específicas
         switch (tipo_de_unidade) {
             case 1:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Comprimento.\n");
                 break;
             case 2:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Massa.\n");
                 break;
             case 3:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Volume.\n");
                 break;
             case 4:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Temperatura.\n");
                 break;
             case 5:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Velocidade.\n");
                 break;
             case 6:
+                system("cls"); // Limpa a tela no Windows
+                printf("Unidades de Tempo.\n");
                 grandezasEletricas();
                 break;
             case 7:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Área.\n");
                 break;
             case 8:
+                system("cls"); // Limpa a tela no Windows
                 printf("Unidades de Tempo.\n");
                 break;
             case 9:
+                system("cls"); // Limpa a tela no Windows
+                printf("Unidades de Dados\n");
                 unidades_armazenamento();
                 break;
             case 10:
